@@ -10,7 +10,7 @@ module.exports = function (token) {
   })
 
   function run (language, version, files) {
-    if (Array.isArray(version)) {
+    if (!Array.isArray(version)) {
       files = version
       version = undefined
     }
