@@ -14,10 +14,7 @@ module.exports = function (token) {
       files = version
       version = undefined
     }
-    return axios.post('https://run.glot.io/languages/' + language + '/' + (version || 'latest'), {
-      data: {
-        files: files
-      }
+    return axios.post('https://run.glot.io/languages/' + language + '/' + (version || 'latest'), files
     }).then(function (res) {
       return res.data
     })
